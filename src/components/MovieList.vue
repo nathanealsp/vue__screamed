@@ -21,10 +21,12 @@ export default {
 
   methods: {
     async fetchData() {
-      const res = await fetch(url);
-      const movies = await res.json();
-      this.movies = [...this.movies, ...movies.results];
-      console.log(movies.results);
+      if (!this.movies.length > 0) {
+        const res = await fetch(url);
+        const movies = await res.json();
+        this.movies = [...this.movies, ...movies.results];
+        console.log(movies.results);
+      }
       try {
       } catch (error) {
         console.log(error);
