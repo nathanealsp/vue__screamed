@@ -3,7 +3,6 @@
   <div>
 <h1>Movie List</h1>
 
-<button type="submit" v-on:click="fetchData">Load Movies</button>
 
 <ul>
   <li v-for="(item, idx) in movies" :key="idx">{{item.title}}</li>
@@ -36,6 +35,10 @@ export default {
         console.error({ Error: error });
       }
     }
+  },
+  // LIFE CYCLE HOOK
+  created() {
+    this.fetchData();
   }
 };
 </script>
