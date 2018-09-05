@@ -2,13 +2,10 @@
   <div>
 <header>Streamed</header>
 <p>{{greeting}}</p>
-<button type="submit" v-on:click="logger">Log Watever</button>
- <ul>
-    <!-- <li v-for="(todo, index) in todos" v-bind:key = "index">
-      {{ todo.name }}
-    </li> -->
-    <ListItem v-for="(todo, index) in todos" v-bind:key ="index" v-bind:name='todo.name'/>
-  </ul>
+<button type="submit" v-on:click="toggleList">{{showButtonText}}</button>
+
+    <ListItem v-if="showList" v-for="(todo, index) in todos" v-bind:key ="index" v-bind:name='todo.name'/>
+
   </div>
 </template>
 
@@ -16,8 +13,11 @@
 import ListItem from "./List-Item.vue";
 export default {
   name: "Header",
+
   data() {
     return {
+      showList: true,
+      showButtonText: "Hide List",
       heading: "Compared to Trello",
       todos: [
         { name: "PWA" },
@@ -31,8 +31,14 @@ export default {
     greeting: String
   },
   methods: {
-    logger: function() {
-      console.log(this.heading);
+    toggleList: function() {
+      if (this.showList === true) {
+        this.showButtonText = "Show List";
+      } else {
+        this.showButtonText = "Hide List";
+      }
+
+      return (this.showList = !this.showList);
     }
   },
   components: {
