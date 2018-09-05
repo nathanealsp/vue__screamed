@@ -1,13 +1,12 @@
 <template>
   <div id="app">
-    <Header greeting="Largest Movie Database"/>
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header greeting="Largest Movie Database"/>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 import Header from "./components/Header.vue";
 
 export default {
@@ -16,7 +15,6 @@ export default {
   // methods,
   // props
   components: {
-    HelloWorld,
     Header
   }
 };
@@ -30,5 +28,30 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+img {
+  width: 40px;
+}
+li {
+  list-style: none;
+}
+
+button {
+  color: aliceblue;
+  background-color: #6200ee;
+  font-weight: 500;
+  letter-spacing: 0.08929em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  box-sizing: border-box;
+  min-width: 64px;
+  height: 36px;
+  border: none;
+  outline: none;
+  line-height: inherit;
+  overflow: hidden;
+  vertical-align: middle;
+  border-radius: 2px;
 }
 </style>
