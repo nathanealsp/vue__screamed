@@ -1,3 +1,4 @@
+
 <template>
   <div>
 <h1>Movie List</h1>
@@ -11,25 +12,28 @@
 </template>
 
 <script>
+// IMPORT API KEY
 import { api_Key } from "../Variables";
+// URL
 const url = `https://api.themoviedb.org/3/discover/movie?api_key=${api_Key}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`;
 export default {
+  // COMPONENT NAME
   name: "MovieList",
+  // DATA (ALWAYS A FUNCTION THAT RETURNS AN OBJECT)
   data() {
     return { movies: [] };
   },
-
+  // METHODS HAVE ACCESS TO DATA THROUGH THIS KEYWORD
   methods: {
     async fetchData() {
       if (!this.movies.length > 0) {
         const res = await fetch(url);
         const movies = await res.json();
-        this.movies = [...this.movies, ...movies.results];
-        console.log(movies.results);
+        this.movies = [...movies.results];
       }
       try {
       } catch (error) {
-        console.log(error);
+        console.error({ Error: error });
       }
     }
   }
