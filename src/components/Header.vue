@@ -3,11 +3,11 @@
 <header>Streamed</header>
 <p>{{greeting}}</p>
 <button type="submit" v-on:click="logger">Log Watever</button>
- <ol>
-    <li v-for="todo in todos">
+ <ul>
+    <li v-for="(todo, index) in todos" v-bind:key = "index">
       {{ todo.name }}
     </li>
-  </ol>
+  </ul>
   </div>
 </template>
 
@@ -16,6 +16,7 @@ export default {
   name: "Header",
   data() {
     return {
+      heading: "Compared to Trello",
       todos: [
         { name: "PWA" },
         { name: "SSR" },
@@ -29,15 +30,12 @@ export default {
   },
   methods: {
     logger: function() {
-      console.log(this);
-      console.log(this.todos.map(item => item.name));
+      console.log(this.heading);
     }
   }
 };
 </script>
 
 <style scoped>
-header {
-}
 </style>
 
