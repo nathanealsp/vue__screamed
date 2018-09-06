@@ -2,12 +2,13 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <Header v-bind:greeting='title'/>
-
+<MovieList/>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
+import MovieList from "./components/MovieList.vue";
 
 export default {
   name: "app",
@@ -19,7 +20,8 @@ export default {
   // methods,
   // props
   components: {
-    Header
+    Header,
+    MovieList
   }
 };
 </script>
