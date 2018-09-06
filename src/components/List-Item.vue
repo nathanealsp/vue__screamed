@@ -13,14 +13,11 @@ export default {
   },
   computed: {
     newTitle: function() {
-      console.log(this);
       return "New Title";
     }
   },
   methods: {
-    clicker() {
-      console.log(this.name);
-    }
+    clicker() {}
   }
 };
 </script>

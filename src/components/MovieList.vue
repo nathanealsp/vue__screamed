@@ -2,15 +2,15 @@
 <template>
   <div>
 <h1>Movie List</h1>
-
-
 <ul>
-  <li v-for="(item, idx) in movies" :key="idx">{{item.title}}</li>
+<Movie v-for="(item, idx) in movies" :key="idx" v-bind:movieDetails='item'/>
 </ul>
   </div>
 </template>
 
 <script>
+// IMPORT COMPONENTS
+import Movie from "./Movie";
 // IMPORT API KEY
 import { api_Key } from "../Variables";
 // URL
@@ -25,23 +25,31 @@ export default {
   // METHODS HAVE ACCESS TO DATA THROUGH THIS KEYWORD
   methods: {
     async fetchData() {
-      if (!this.movies.length > 0) {
-        const res = await fetch(url);
-        const movies = await res.json();
-        this.movies = [...movies.results];
-      }
       try {
+        if (!this.movies.length > 0) {
+          const res = await fetch(url);
+          const movies = await res.json();
+          this.movies = [...movies.results];
+        }
       } catch (error) {
-        console.error({ Error: error });
+        alert(error);
       }
     }
   },
-  // LIFE CYCLE HOOK
+  // LIFE CYCLE HOOK (CREATED)
   created() {
     this.fetchData();
+  },
+  components: {
+    Movie
   }
 };
 </script>
 
 <style scoped>
+ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
 </style>
