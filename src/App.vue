@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
     <Header v-bind:greeting='title'/>
-<MovieList/>
+    <MovieList/>
   </div>
 </template>
 
@@ -17,8 +16,6 @@ export default {
       title: "Biggest Movie DataBase"
     };
   },
-  // methods,
-  // props
   components: {
     Header,
     MovieList
@@ -28,39 +25,10 @@ export default {
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  width: 500px;
-  margin: 0 auto;
-  /* margin-top: 60px; */
-}
-img {
-  width: 40px;
-}
-li {
-  list-style: none;
 }
 
-button {
-  color: aliceblue;
-  background-color: #6200ee;
-  font-weight: 500;
-  letter-spacing: 0.08929em;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  box-sizing: border-box;
-  min-width: 64px;
-  height: 36px;
-  border: none;
-  outline: none;
-  line-height: inherit;
-  overflow: hidden;
-  vertical-align: middle;
-  border-radius: 2px;
+li {
+  list-style: none;
 }
 </style>
 

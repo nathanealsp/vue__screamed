@@ -1,10 +1,7 @@
 <template>
  <div class="movie">
-  <p class="movie_title">{{movieDetails.title}}</p>
    <img v-bind:src='imgPath' alt="">
-   <p>{{imgPath}}</p>
-   <p class="movie_rating">Ratings</p>
-  <p class="movie_overview">Overview</p>
+   <div>EHYEYYEYEYEYEYE</div>
  </div>
 </template>
 
@@ -12,10 +9,13 @@
 import { POSTER_PATH } from "../Variables.js";
 
 export default {
+  // COMPONENT NAME
   name: "Movie",
+  // DATA FUNCTION RETURNS AN OBJECT
   data() {
     return {};
   },
+  // COMPUTED PROPERTIES
   computed: {
     // WILL GENERATE THE IMAGE LINK
     imgPath() {
@@ -23,12 +23,12 @@ export default {
       return imgLink;
     }
   },
-
+  // METHODS
   methods: {},
   created() {
     this.getImg();
   },
-
+  // PROPS
   props: {
     movieDetails: Object
   }
@@ -36,26 +36,25 @@ export default {
 </script>
 
 <style scoped>
-.movie {
-  color: white;
-  text-transform: uppercase;
-  width: 300px;
-  border: 2px solid #6200ee;
-  border-radius: 5px;
-  background: #6200ee;
-  padding: 0;
-  margin: 0;
+img {
+  /* width: 185px; */
+  /* border-radius: 5px; */
+  /* -webkit-box-shadow: -2px 10px 45px -9px rgba(74, 20, 140, 1);
+  -moz-box-shadow: -2px 10px 45px -9px rgba(74, 20, 140, 1);
+  box-shadow: -2px 10px 45px -9px rgba(74, 20, 140, 1); */
+}
+
+/* img:hover {
   -webkit-box-shadow: -2px 10px 45px -9px rgba(74, 20, 140, 1);
   -moz-box-shadow: -2px 10px 45px -9px rgba(74, 20, 140, 1);
   box-shadow: -2px 10px 45px -9px rgba(74, 20, 140, 1);
+} */
+
+.movie {
+  display: grid;
+  grid-template-columns: 185px, 1fr;
+  width: 298px;
+  height: 278px;
 }
-.movie_title {
-  background: #6200ee;
-  padding: 5px;
-  margin: 0;
-  font-weight: bold;
-}
-img {
-  width: 100%;
-}
+
 </style>

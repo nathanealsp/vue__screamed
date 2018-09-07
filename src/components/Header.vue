@@ -8,19 +8,21 @@
 </template>
 
 <script>
-import ListItem from "./List-Item.vue";
 export default {
+  // NAME OF COMPONENT
   name: "Header",
-
+  // DATA (FUNCTION RETURNS AN OBJECT )
   data() {
     return {
       showList: true,
       showButtonText: "Hide List"
     };
   },
+  // PROPS
   props: {
     greeting: String
   },
+  // METHODS
   methods: {
     toggleList: function() {
       if (this.showList === true) {
@@ -32,6 +34,7 @@ export default {
       return (this.showList = !this.showList);
     }
   },
+  // COMPONENTS
   components: {}
 };
 </script>

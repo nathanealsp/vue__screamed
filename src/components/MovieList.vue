@@ -1,10 +1,10 @@
 
 <template>
   <div>
-<h1>Movie List</h1>
-<ul>
-<Movie v-for="(item, idx) in movies" :key="idx" v-bind:movieDetails='item'/>
-</ul>
+    <h1>Movie List</h1>
+    <ul>
+    <Movie v-for="(item, idx) in movies" :key="idx" v-bind:movieDetails='item'/>
+    </ul>
   </div>
 </template>
 
@@ -40,6 +40,7 @@ export default {
   created() {
     this.fetchData();
   },
+  // COMPONENTS
   components: {
     Movie
   }
@@ -49,7 +50,7 @@ export default {
 <style scoped>
 ul {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
 }
 p {
