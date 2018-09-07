@@ -1,13 +1,12 @@
 <template>
   <div id="app">
     <Header v-bind:greeting='title'/>
-    <MovieList/>
+    <router-view/>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
-import MovieList from "./components/MovieList.vue";
 
 export default {
   name: "app",
@@ -17,8 +16,7 @@ export default {
     };
   },
   components: {
-    Header,
-    MovieList
+    Header
   }
 };
 </script>
