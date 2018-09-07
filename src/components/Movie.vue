@@ -1,8 +1,7 @@
 <template>
  <div class="movie">
   <p class="movie_title">{{movieDetails.title}}</p>
-   <!-- <img src="https://cdn.images.express.co.uk/img/dynamic/36/590x/AVENGERS-INFINITY-WAR-1012494.jpg?r=1536001841753" alt="" srcset=""> -->
-   <img v-bind:src='imgPath' alt="" >
+   <img v-bind:src='imgPath' alt="">
    <p>{{imgPath}}</p>
    <p class="movie_rating">Ratings</p>
   <p class="movie_overview">Overview</p>
@@ -15,18 +14,17 @@ import { POSTER_PATH } from "../Variables.js";
 export default {
   name: "Movie",
   data() {
-    return {
-      imgPath: null
-    };
+    return {};
   },
-  computed: {},
-
-  methods: {
-    getImg() {
-      this.imgPath = `${POSTER_PATH}${this.movieDetails.poster_path}`;
-      return this.imgPath;
+  computed: {
+    // WILL GENERATE THE IMAGE LINK
+    imgPath() {
+      const imgLink = `${POSTER_PATH}${this.movieDetails.poster_path}`;
+      return imgLink;
     }
   },
+
+  methods: {},
   created() {
     this.getImg();
   },

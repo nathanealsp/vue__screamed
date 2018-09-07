@@ -49,7 +49,14 @@ export default {
 <style scoped>
 ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 5px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+}
+p {
+  font-weight: bold;
+  border: 2px solid #6200ee;
+  padding: 5px;
+  width: 200px;
+  border-radius: 2px;
 }
 </style>

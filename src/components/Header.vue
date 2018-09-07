@@ -3,7 +3,7 @@
 <h1>Streamed</h1>
 <h3>{{greeting}}</h3>
 <button type="submit" v-on:click="toggleList">{{showButtonText}}</button>
-    <ListItem v-if="showList" v-for="(todo, index) in todos" v-bind:key ="index" v-bind:name='todo.name'/>
+
   </div>
 </template>
 
@@ -15,14 +15,7 @@ export default {
   data() {
     return {
       showList: true,
-      showButtonText: "Hide List",
-      heading: "Compared to Trello",
-      todos: [
-        { name: "PWA" },
-        { name: "SSR" },
-        { name: "VUE" },
-        { name: "PYTHON" }
-      ]
+      showButtonText: "Hide List"
     };
   },
   props: {
@@ -39,9 +32,7 @@ export default {
       return (this.showList = !this.showList);
     }
   },
-  components: {
-    ListItem
-  }
+  components: {}
 };
 </script>
 
