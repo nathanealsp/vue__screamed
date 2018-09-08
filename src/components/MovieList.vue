@@ -1,7 +1,6 @@
 
 <template>
-  <div>
-    <h1>Movie List</h1>
+  <div class="movie_list">
     <ul>
     <Movie v-for="(item, idx) in movies" :key="idx" v-bind:movieDetails='item'/>
     </ul>
@@ -48,10 +47,14 @@ export default {
 </script>
 
 <style scoped>
+.movie_list {
+  padding-top: 70px;
+}
 ul {
+  padding: 30px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
+  grid-gap: 30px;
 }
 p {
   font-weight: bold;

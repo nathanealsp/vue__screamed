@@ -1,9 +1,6 @@
 <template>
   <div>
-<h1>Streamed</h1>
-<h3>{{greeting}}</h3>
-<button type="submit" v-on:click="toggleList">{{showButtonText}}</button>
-
+    <h1>Streamed</h1>
   </div>
 </template>
 
@@ -40,5 +37,18 @@ export default {
 </script>
 
 <style scoped>
+div {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+h1 {
+  color: aliceblue;
+  background-color: #6200ee;
+  padding: 20px;
+  margin: 0;
+}
 </style>
 

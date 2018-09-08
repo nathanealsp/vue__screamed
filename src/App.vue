@@ -1,7 +1,9 @@
 <template>
-  <div id="app">
+  <div id="apps">
     <Header v-bind:greeting='title'/>
+    <div id="app">
     <router-view/>
+    </div>
   </div>
 </template>
 
@@ -23,10 +25,6 @@ export default {
 
 <style>
 #app {
-}
-
-li {
-  list-style: none;
 }
 </style>
 
