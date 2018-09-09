@@ -1,6 +1,8 @@
 <template>
  <div class="movie">
+   <router-link v-bind:to="linkParams">
    <img v-bind:src='imgPath' alt="">
+   </router-link>
  </div>
 </template>
 
@@ -20,6 +22,10 @@ export default {
     imgPath() {
       const imgLink = `${POSTER_PATH}${this.movieDetails.poster_path}`;
       return imgLink;
+    },
+    linkParams() {
+      const linkParam = `/movie/${this.movieDetails.id}`;
+      return linkParam;
     }
   },
   // METHODS
@@ -36,7 +42,7 @@ export default {
 
 <style scoped>
 .movie {
-  /* border: 0.125em solid rgba(57, 138, 106, 0.84); */
+  border: 0.125em solid rgba(57, 138, 106, 0.84);
   border-radius: 0.2em;
   display: grid;
   height: 278px;
