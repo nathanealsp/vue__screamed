@@ -36,8 +36,20 @@ export default {
 
 <style scoped>
 .movie {
+  /* border: 0.125em solid rgba(57, 138, 106, 0.84); */
+  border-radius: 0.2em;
   display: grid;
-  box-shadow: -2px 10px 45px -9px rgba(74, 20, 140, 1);
+  height: 278px;
+}
+.movie:hover {
+  /* border: 0.125em solid rgba(57, 138, 106, 0.84); */
+  border-radius: 0.2em;
+  display: grid;
+  -webkit-box-shadow: 0px 29px 73px -36px rgba(57, 138, 106, 0.84);
+  -moz-box-shadow: 0px 29px 73px -36px rgba(57, 138, 106, 0.84);
+  box-shadow: 0px 29px 73px -36px rgba(57, 138, 106, 0.84);
+  border-bottom: 1px solid rgba(57, 138, 106, 0.84);
+  height: 278px;
 }
 
 img {

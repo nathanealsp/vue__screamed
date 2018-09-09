@@ -1,9 +1,7 @@
 <template>
-  <div id="apps">
+  <div id="app">
     <Header v-bind:greeting='title'/>
-    <div id="app">
     <router-view/>
-    </div>
   </div>
 </template>
 
@@ -24,7 +22,5 @@ export default {
 </script>
 
 <style>
-#app {
-}
 </style>
 

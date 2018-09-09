@@ -43,11 +43,17 @@ div {
   top: 0;
   left: 0;
   z-index: 999;
+  -webkit-box-shadow: -2px -1px 37px -7px rgba(57, 138, 106, 1);
+  -moz-box-shadow: -2px -1px 37px -7px rgba(57, 138, 106, 1);
+  box-shadow: -2px -1px 37px -7px rgba(57, 138, 106, 1);
 }
 h1 {
-  color: aliceblue;
-  background-color: #6200ee;
-  padding: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #398a6a;
+  background-color: #fefffe;
+  font-size: 2em;
+  padding: 30px;
   margin: 0;
 }
 </style>
