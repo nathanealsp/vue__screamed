@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="movie__detail">
     <p>{{movie.name}}</p>
     <img v-bind:src='imgPath' alt="">
     <p>{{movie.title}}</p>
@@ -62,4 +62,13 @@ export default {
 </script>
 
 <style scoped>
+.movie__detail {
+  width: 60%;
+  height: 50vh;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
 </style>

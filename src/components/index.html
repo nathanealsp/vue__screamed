@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=div, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class='container'>
+    <button>Click</button>
+    <div class="modal">Center me
+      <div class="close">X</div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nesciunt temporibus ex facere ratione iusto consectetur
+      nobis culpa autem ut numquam voluptatibus voluptate vel dolorum, ad, velit, nemo placeat tenetur?</p>
+  </div>
+</body>
+<style>
+  :root {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .container {
+    background: grey;
+    background-color: #f3f3f3;
+    height: 100vh;
+    position: relative;
+
+  }
+
+  .modal {
+    display: none
+  }
+
+  .active {
+    height: 50vh;
+    width: 50vw;
+    margin: 0 auto;
+    background-color: #ccc;
+    /* z-index: 999; */
+    -webkit-box-shadow: 0px 0px 300px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 300px -7px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 300px -7px rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    display: grid;
+    transform: translate(50%, 50%);
+  }
+</style>
+<script>
+  const button = document.querySelector('button');
+  const close = document.querySelector('.close');
+  const modal = document.querySelector('.modal');
+  button.addEventListener('click', () => {
+    modal.className = "active";
+  })
+
+  close.addEventListener('click', () => {
+    modal.className = "modal";
+  })
+
+
+</script>
+
+</html>
