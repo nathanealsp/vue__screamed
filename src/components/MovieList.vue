@@ -49,12 +49,12 @@ export default {
 <style scoped>
 .movie_list {
   padding-top: 94px;
-  width: 80%;
-  margin: 0 auto;
 }
 ul {
+  width: 60%;
+  margin: 50px auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(483px, 1fr));
+  grid-gap: 35px;
 }
 </style>

@@ -90,30 +90,10 @@ h6 {
 }
 
 #app {
-  /* width: 75%; */
   margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   background-color: #F8F5F0;
-}
-
-button {
-  color: aliceblue;
-  background-color: #398a6a;
-  font-weight: 500;
-  letter-spacing: 0.08929em;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  box-sizing: border-box;
-  min-width: 64px;
-  /* height: 36px; */
-  border: none;
-  outline: none;
-  line-height: inherit;
-  overflow: hidden;
-  vertical-align: middle;
-  border-radius: 2px;
 }

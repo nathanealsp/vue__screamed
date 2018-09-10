@@ -1,9 +1,18 @@
 <template>
+
  <div class="movie">
-   <router-link v-bind:to="linkParams">
    <img v-bind:src='imgPath' alt="">
-   </router-link>
+   <div class="movie__detail">
+     <div class="movie__title">{{movieDetails.title}}</div>
+     <div class="movie__overview" >{{movieDetails.overview}}</div>
+      <div class="movie__more">
+        <router-link v-bind:to="linkParams">
+          <button>more</button>
+        </router-link>
+      </div>
+   </div>
  </div>
+
 </template>
 
 <script>
@@ -42,23 +51,67 @@ export default {
 
 <style scoped>
 .movie {
-  border: 0.125em solid rgba(57, 138, 106, 0.84);
-  border-radius: 0.2em;
+  font-size: 16px;
+  width: 483px;
+  height: 300px;
   display: grid;
-  height: 278px;
-}
-.movie:hover {
-  /* border: 0.125em solid rgba(57, 138, 106, 0.84); */
-  border-radius: 0.2em;
-  display: grid;
-  -webkit-box-shadow: 0px 29px 73px -36px rgba(57, 138, 106, 0.84);
-  -moz-box-shadow: 0px 29px 73px -36px rgba(57, 138, 106, 0.84);
-  box-shadow: 0px 29px 73px -36px rgba(57, 138, 106, 0.84);
-  border-bottom: 1px solid rgba(57, 138, 106, 0.84);
-  height: 278px;
+  background: white;
+  grid-template-columns: 200px 1fr;
+  box-shadow: 0 2px 8px rgba(57, 138, 106, 0.5);
 }
 
 img {
-  height: 278px;
+  width: 100%;
+}
+
+.movie__detail {
+  display: grid;
+  grid-template-rows: 1fr 160px 1fr;
+  padding: 10px;
+}
+
+.movie__title {
+  color: #000;
+  width: 100%;
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  line-height: 1.1em;
+  padding: 5px 0;
+  margin-bottom: 2px;
+}
+
+.movie__overview {
+  color: #4d4d4d;
+  line-height: 1.4em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.movie__more {
+  margin-top: 2px;
+  border-top: 1px solid #e3e3e3;
+  display: grid;
+  justify-items: right;
+  align-items: center;
+}
+
+button {
+  padding: 10px 16px;
+  white-space: nowrap;
+  font-size: 0.9em;
+  cursor: pointer;
+  color: aliceblue;
+  background-color: #398a6a;
+  font-weight: 500;
+  letter-spacing: 0.08929em;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  min-width: 64px;
+  height: 36px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
 }
 </style>
