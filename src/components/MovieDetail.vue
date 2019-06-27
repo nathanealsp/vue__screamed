@@ -66,14 +66,15 @@ export default {
 div {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
-.movie__detail {
-  width: 60%;
-  height: 50vh;
-  margin: 0 auto;
 }
 
-img {
-  width: 100%;
-}
+  .movie__detail {
+   width: 60%;
+   height: 50vh;
+   margin: 0 auto;
+  }
+
+  img {
+    width: 100%;
+  }
 </style>
